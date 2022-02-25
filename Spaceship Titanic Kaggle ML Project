@@ -144,9 +144,9 @@ print('train columns with missing data:', cols_with_missing_train)
 print('test columns with missing data:', cols_with_missing_test)
 
 for col in cols_with_missing_train:
-    most_freq = train_data[col].value_counts().index[0]
-    train_data[col] = train_data[col].fillna(most_freq)
-    test_data[col] = test_data[col].fillna(most_freq)
+    most_freq = d_train[col].value_counts().index[0]
+    train_data[col] = d_train[col].fillna(most_freq)
+    test_data[col] = d_test[col].fillna(most_freq)
 
 
     
